@@ -1,0 +1,87 @@
+/* Mobile View*/
+@media (max-width: 700px) { 
+    .card {
+    width: 90%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .btn {
+        margin-left: 2rem;
+        margin-right: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 701px) and (max-width: 1024px) { 
+    .card {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    }
+
+    .card-body {
+        padding: 0.5rem;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .btn {
+        margin-left: 1.5rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) and (max-width: 1440px) { 
+    .card {
+    width: 100%;
+    }
+
+    .card-body {
+        padding: 0.3rem;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .btn {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 45%
+    }
+}
+
+/* above 1440px view */
+@media (min-width: 1441px) {
+    .card {
+        width: 13rem;
+    }
+    
+    .card-body {
+        padding: 0.3rem;
+    }
+    
+    .card-text {
+        text-align: center;
+    }
+    
+    .btn {
+        margin-left: 1.3rem;
+        margin-right: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}

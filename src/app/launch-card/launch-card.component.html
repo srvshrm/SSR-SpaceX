@@ -1,0 +1,26 @@
+    <div class='row'>
+        <div class='column' *ngFor='let data of launchData'>
+            <div class='card'>
+                <img class='card-img-top' src={{data.links.mission_patch_small}}>
+                <div class='card-body'>
+                    <h5 class='card-title'><strong>{{data.mission_name }} #{{data.flight_number }}</strong></h5>
+                    <strong class='card-text'>Mission Ids:</strong>
+                    <ul>
+                        <li *ngFor='let id of data.mission_id'>
+                            {{id}}
+                        </li>
+                    </ul>
+                    <strong class='card-text'>Launch Year: </strong>{{data.launch_year || ''}}
+                    <br>
+                    <strong class='card-text'>Successful Launch: </strong>{{data?.launch_success?.toString() || '' | titlecase}}
+                    <br>
+                    <strong class='card-text'>Successful Landings: </strong>
+                    {{data?.rocket.first_stage?.cores[0]?.land_success?.toString() || '' | titlecase}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf = 'serverError'>
+        <p class = 'error'>{{serverError.error.error}}</p>
+    </div>

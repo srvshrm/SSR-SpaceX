@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ssr-spacex": {
+      "hosting": {
+        "SpaceX": [
+          "ssr-spacex"
+        ]
+      }
+    }
+  }
+}
