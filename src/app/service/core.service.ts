@@ -20,7 +20,6 @@ export class CoreService {
    * @returns Observable<any>
    * @description Get call to API
    */
-
   getData() {
     return this.http.get(this._url);
   }
@@ -31,7 +30,6 @@ export class CoreService {
    * @returns Observable<any>
    * @description Generate the filter url
    */
-
   setFilterParams(filter: string, value: string) {
     if (filter === 'launch_success') {
       this._launch_success = value;
@@ -47,7 +45,6 @@ export class CoreService {
    * @returns string
    * @description Get filter params
    */
-
   getFilterParams() {
     return [this._launch_success, this._land_success, this._launch_year];
   }
