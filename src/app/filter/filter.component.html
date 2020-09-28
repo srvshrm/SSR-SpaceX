@@ -1,25 +1,28 @@
-
-    <div class='card'>
-        <div class='card-body'>
-            <h5 class='card-title'><strong>Filters</strong></h5>
-            <h6 class='card-text'>Launch Year</h6>
-            <hr>
-            <button class='btn btn-success' *ngFor='let year of years; let i = index' (click)='applyFilter("launch_year",year)'>
-                {{year}}
-            </button>
-            <br><br>
-            <h6 class='card-text'>Successful Launch</h6>
-            <hr>
-            <button class='btn btn-success' *ngFor='let value of values; let i = index'
-                (click)='applyFilter("launch_success",value.toLowerCase())'>
-                {{value}}
-            </button>
-            <br><br>
-            <h6 class='card-text'>Successful Landing</h6>
-            <hr>
-            <button class='btn btn-success' *ngFor='let value of values; let i = index'
-                (click)='applyFilter("land_success",value.toLowerCase())'>
-                {{value}}
-            </button>
-        </div>
+<div class='card'>
+    <div class='card-body'>
+        <h5 class='card-title'><strong>Filters</strong></h5>
+        <h6 class='card-text'>Launch Year</h6>
+        <hr>
+        <button class='btn btn-success' *ngFor='let year of years; let i = index'
+            [ngClass]='{"btn-danger": yearFlag[i]}'
+            (click)='applyFilter("launch_year",year,i)'>
+            {{year}}
+        </button>
+        <br><br>
+        <h6 class='card-text'>Successful Launch</h6>
+        <hr>
+        <button class='btn btn-success' *ngFor='let value of launch; let i = index'
+            [ngClass]='{"btn-danger": launchFlag[i]}'
+            (click)='applyFilter("launch_success",value.toLowerCase(),i)'>
+            {{value}}
+        </button>
+        <br><br>
+        <h6 class='card-text'>Successful Landing</h6>
+        <hr>
+        <button class='btn btn-success' *ngFor='let value of land; let i = index'
+            [ngClass]='{"btn-danger": landFlag[i]}'
+            (click)='applyFilter("land_success",value.toLowerCase(),i)'>
+            {{value}}
+        </button>
     </div>
+</div>

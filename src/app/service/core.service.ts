@@ -33,10 +33,6 @@ export class CoreService {
    */
 
   setFilterParams(filter: string, value: string) {
-    if (this._launch_success !== '' && this._land_success !== '' && this._launch_year !== '') {
-      this.resetFilterParams();
-    }
-
     if (filter === 'launch_success') {
       this._launch_success = value;
     } else if (filter === 'land_success') {
@@ -64,12 +60,6 @@ export class CoreService {
 
   getDataRefresh(): Observable<any> {
     return this._dataRefresh$.asObservable();
-  }
-
-  resetFilterParams() {
-    this._launch_success = '';
-    this._land_success = '';
-    this._launch_year = '';
   }
 
 }
