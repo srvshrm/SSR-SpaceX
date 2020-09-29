@@ -20,6 +20,7 @@ export class FilterComponent {
   land: string[] = ['True', 'False'];
 
   landFlag: boolean[] = [false, false];
+
   temp: any;
 
   constructor(private coreService: CoreService) { }

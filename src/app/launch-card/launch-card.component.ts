@@ -27,4 +27,7 @@ export class LaunchCardComponent implements OnInit {
     });
   }
 
+  trackByMethod(index: number, el: any): number {
+    return el.flight_number;
+  }
 }
