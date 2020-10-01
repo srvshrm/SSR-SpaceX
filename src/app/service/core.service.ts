@@ -9,11 +9,16 @@ export class CoreService {
 
   constructor(private http: HttpClient) { }
 
+  // tslint:disable-next-line: variable-name
   private _url = 'https://api.spaceXdata.com/v3/launches?limit=100';
+  // tslint:disable-next-line: variable-name
   private _launch_success = '';
+  // tslint:disable-next-line: variable-name
   private _land_success = '';
+  // tslint:disable-next-line: variable-name
   private _launch_year = '';
 
+  // tslint:disable-next-line: variable-name
   private _dataRefresh$ = new Subject<any>();
 
   /**
